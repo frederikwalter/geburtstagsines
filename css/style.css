@@ -1,0 +1,23 @@
+.poem {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f5f5dc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.inline-elements {
+    display: flex;
+    /* Use flexbox to align elements in a row */
+    align-items: center;
+    /* Align items vertically in the center */
+}
+
+.inline-elements div,
+.inline-elements input {
+    margin: 0;
+    /* Remove default margins */
+}

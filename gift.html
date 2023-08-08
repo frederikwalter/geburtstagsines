@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ines</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Include particle.js library -->
+    <script src="particlejs/particles.min.js"></script>
+    <style>
+        /* Additional styles for the firework container */
+        #firework-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-8">
+                <div class="content text-center">
+                    <h1>Geschafft</h1>
+                    <p class="lead">Nun hast du doch noch dein Geschenk bekommen! Ich hoffe, du hattest schon ein bisschen Spaß und wir werden noch viel mehr Freude zusammen haben.</p>
+                    <img src="voucher.jpeg" alt="Voucher Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="firework-container"></div>
+    <!-- Link to Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Particle animation script -->
+    <script>
+        particlesJS("firework-container", {
+            particles: {
+                number: {
+                    value: 100,
+                },
+                color: {
+                    value: "#ff0000", // Firework color
+                },
+                shape: {
+                    type: "circle",
+                },
+                opacity: {
+                    value: 1,
+                },
+                size: {
+                    value: 4,
+                },
+                line_linked: {
+                    enable: false,
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                },
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: false,
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

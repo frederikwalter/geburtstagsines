@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesund leben</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-8">
+                <div class="content text-center">
+                    <h1 class="display-4">Ode an den Genuss</h1>
+                    <p>Jetzt zählt es noch an die Gesundheit zu denken. Dabei soll aber der Genuss nicht zu kurz kommen. Zum Glück gibt es dafür ein wundervolles Gedicht, wie jeder den Spagat schaffen kann. </p>
+                    <!-- Placeholder poem -->
+                    <div class="poem">
+                        <p>In meinem Korb, so voller Genuss,</p>
+                        <p><u>italienischer Frischkäse</u>, das ist ein Muss.</p>
+                        <p><u>Getrocknete Weinbeeren</u>, süß und fein,</p>
+                        <p><u>aufgerollte Rindfleischfladen</u>, laden ein.</p>
+                        <p>Dazu ein Glas von feinem <u>Lambrusco</u></p>
+                        <p>Gesund essen geht auch Mucho Gusto</p>
+                        <br><br>
+                        <p>Da brauch ich sicher keinen Arzttermin</p>
+                        <p>Denn genug habe ich sogar vom Fruchtbarkeitsvitamin</p>
+                        <br><br>
+                        <p>Orangen, Paprika und Tomaten</p>
+                        <p>Auf den Skorbut muss ich noch lange warten</p>
+                        <br><br>
+                        <p>Und auch an Biotin da mangelt es mir nicht</p>
+                        <p>Nicht das B soll hier ans Tageslicht</p>
+                        <br><br>
+                        <p>So kann mein Köper produzieren</p>
+                        <p>zum bekämpfen aller Viren</p>
+                        <p>die weißen Blutkörperchen in Massen</p>
+                        <p>und ich kann meine Sorgen einfach lassen</p>
+                    </div>
+                    <!-- Text input and submit button -->
+                    <form id="itemsForm">
+                        <div class="form-group mt-3">
+                            <input type="text" id="textInput" class="form-control" placeholder="Wort der Ode">
+                        </div>
+                        <button type="button" id="submitBtn" class="btn btn-primary">Gesundheit</button>
+                    </form>
+                    <div id="resultMessage" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link to Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const textInput = document.getElementById('textInput');
+        const resultMessage = document.getElementById('resultMessage');
+
+        submitBtn.addEventListener('click', function () {
+            const inputText = textInput.value.toLowerCase().trim();
+
+            if (inputText === 'recht') {
+                resultMessage.innerHTML = '<div class="alert alert-success mt-3">Mucho Gusto! <br> So kann jeder was für die Gesundheit tun!</div> <div> <a href="location.html" class="btn btn-success">Und nun zum Finale!</a> </div>';
+                submitBtn.style.display = 'none';
+            } else {
+                resultMessage.innerHTML = '<div class="alert alert-danger mt-3">Mhhh... So wird das wahrscheinlich nichts mit dem langen Leben</div>';
+            }
+        });
+    </script>
+</body>
+
+</html>
