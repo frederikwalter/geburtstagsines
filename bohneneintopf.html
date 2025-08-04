@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-md-8">
-                <div class="content text-center">
+                <div class="content text-center mb-5">
                     <h1 class="display-4">Bohneneintopf</h1>
                     <p>Hoffentlich war das schon nach deinem Geschmack. Sonst habe ich hier ein ganz wundervolles Rezept für Bohneneintopf gefunden! Lass uns das mal zusammen kochen. Das wird ein Festmahl!</p>
                     <ul class="text-left">
@@ -60,12 +60,11 @@
             return hashHex;
         }
 
-        submitBtn.addEventListener('click', async function () {
+        async function handleSubmission(event) {
+            if (event) event.preventDefault();
             const inputText = textInput.value.toLowerCase().trim().replace(/\s+/g, '');
-            
             try {
                 const inputHash = await hashString(inputText);
-                
                 if (inputHash === correctHash) {
                     resultMessage.innerHTML = '<div class="alert alert-success mt-3">Mhhhh... Ist das lecker! Damit könnten wir sofort ein tolles Restaurant aufmachen. Lass uns dafür mal ein bisschen Inspiration holen.</div> <div> <a href="gift.html" class="btn btn-success">Auf zum Ideen sammeln!</a> </div>';
                     submitBtn.style.display = 'none';
@@ -76,7 +75,10 @@
                 console.error('Fehler beim Hashen:', error);
                 resultMessage.innerHTML = '<div class="alert alert-danger mt-3">Ein Fehler ist aufgetreten.</div>';
             }
-        });
+        }
+
+        submitBtn.addEventListener('click', handleSubmission);
+        document.getElementById('kletternForm').addEventListener('submit', handleSubmission);
     </script>
 </body>
 

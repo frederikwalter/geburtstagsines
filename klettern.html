@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-md-8">
-                <div class="content text-center">
+                <div class="content text-center  mb-5">
                     <h1 class="display-4">Kletterei</h1>
                     <p>Lass uns zusammen klettern gehen. Ich habe auch schon ganz viele tolle Routen gefunden, die wir zusammen machen können!</p>
                     <ul class="text-left">
@@ -69,12 +69,11 @@
             return hashHex;
         }
 
-        submitBtn.addEventListener('click', async function () {
+        async function handleSubmission(event) {
+            if (event) event.preventDefault();
             const inputText = textInput.value.toLowerCase().trim().replace(/\s+/g, '');
-            
             try {
                 const inputHash = await hashString(inputText);
-                
                 if (inputHash === correctHash) {
                     resultMessage.innerHTML = '<div class="alert alert-success mt-3">Richtig gut! Einfach alle Routen durchgezogen. Das kann sich echt sehen lassen. Aber jetzt brauchen wir endlich was zum Essen! Aber was nur essen? Mir ist letztens was unter das Sofa gerollt. Vielleicht ist das ja noch gut und essbar? </div>';
                     submitBtn.style.display = 'none';
@@ -85,7 +84,10 @@
                 console.error('Fehler beim Hashen:', error);
                 resultMessage.innerHTML = '<div class="alert alert-danger mt-3">Ein Fehler ist aufgetreten.</div>';
             }
-        });
+        }
+
+        submitBtn.addEventListener('click', handleSubmission);
+        document.getElementById('kletternForm').addEventListener('submit', handleSubmission);
     </script>
 </body>
 
