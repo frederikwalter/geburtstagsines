@@ -57,7 +57,6 @@
         const textInput = document.getElementById('textInput');
         const resultMessage = document.getElementById('resultMessage');
 
-        // Hash von "jetzthabichhunger" (SHA-256)
         const correctHash = '274588640143f3960c6a1cbac6ec34630e6ed4f1350e9dca132bcd5246dd3cc5';
 
         // Funktion zum Hashen eines Strings mit SHA-256
@@ -77,7 +76,7 @@
                 const inputHash = await hashString(inputText);
                 
                 if (inputHash === correctHash) {
-                    resultMessage.innerHTML = '<div class="alert alert-success mt-3">Richtig gut! Einfach alle Routen durchgezogen. Das kann sich echt sehen lassen. Aber jetzt brauchen wir endlich was zum Essen!</div> <div> <a href="essen.html" class="btn btn-success">Gib mir Essen!</a> </div>';
+                    resultMessage.innerHTML = '<div class="alert alert-success mt-3">Richtig gut! Einfach alle Routen durchgezogen. Das kann sich echt sehen lassen. Aber jetzt brauchen wir endlich was zum Essen! Aber was nur essen? Mir ist letztens was unter das Sofa gerollt. Vielleicht ist das ja noch gut und essbar? </div>';
                     submitBtn.style.display = 'none';
                 } else {
                     resultMessage.innerHTML = '<div class="alert alert-danger mt-3">Da müssen wir wohl nochmal reingehen... </div>';

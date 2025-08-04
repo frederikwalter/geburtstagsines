@@ -16,7 +16,7 @@
             <div class="col-md-8">
                 <div class="content text-center">
                     <h1 class="display-4">Bohneneintopf</h1>
-                    <p>Ich habe hier ein ganz wundervolles Rezept für Bohneneintopf gefunden! Lass uns das mal zusammen kochen. Das wird ein Festmahl!</p>
+                    <p>Hoffentlich war das schon nach deinem Geschmack. Sonst habe ich hier ein ganz wundervolles Rezept für Bohneneintopf gefunden! Lass uns das mal zusammen kochen. Das wird ein Festmahl!</p>
                     <ul class="text-left">
                         <li>Kakaobohne</li>
                         <li><b>Ö</b>l</li>
@@ -48,8 +48,7 @@
         const textInput = document.getElementById('textInput');
         const resultMessage = document.getElementById('resultMessage');
 
-        // Hash von "jetzthabichhunger" (SHA-256)
-        const correctHash = '274588640143f3960c6a1cbac6ec34630e6ed4f1350e9dca132bcd5246dd3cc5';
+        const correctHash = 'c8a10d3c8b1b5d8dc8eaf0405313b9a3d9132486db028c21cd4a087cb3a4971c';
 
         // Funktion zum Hashen eines Strings mit SHA-256
         async function hashString(str) {
@@ -68,7 +67,7 @@
                 const inputHash = await hashString(inputText);
                 
                 if (inputHash === correctHash) {
-                    resultMessage.innerHTML = '<div class="alert alert-success mt-3">Richtig gut! Einfach alle Routen durchgezogen. Das kann sich echt sehen lassen. Aber jetzt brauchen wir endlich was zum Essen!</div> <div> <a href="essen.html" class="btn btn-success">Gib mir Essen!</a> </div>';
+                    resultMessage.innerHTML = '<div class="alert alert-success mt-3">Mhhhh... Ist das lecker! Damit könnten wir sofort ein tolles Restaurant aufmachen. Lass uns dafür mal ein bisschen Inspiration holen.</div> <div> <a href="gift.html" class="btn btn-success">Auf zum Ideen sammeln!</a> </div>';
                     submitBtn.style.display = 'none';
                 } else {
                     resultMessage.innerHTML = '<div class="alert alert-danger mt-3">Da müssen wir wohl nochmal reingehen... </div>';
