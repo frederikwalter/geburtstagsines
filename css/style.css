@@ -1,11 +1,11 @@
 
 /* Color palette variables */
 :root {
-    --color1: #9ad5ca;   /* Mindaro */
-    --color2: #095256;   /* Citrine */
-    --color3: #7f055f;   /* Satin sheen gold */
-    --color4: #e07be0;   /* Licorice */
-    --color5: #849324;   /* Tiffany Blue */
+    --color1: #9ad5ca;   /* Tiffany Blue */
+    --color2: #095256;   /* Midnight green */
+    --color3: #7f055f;   /* Byzantium */
+    --color4: #e07be0;   /* Orchid */
+    --color5: #849324;   /* Olive */
 }
 
 /* Custom button styles for gradient background */
